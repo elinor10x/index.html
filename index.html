@@ -1,27 +1,61 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Image Gallery</title>
-    <link rel="stylesheet" href="styles.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Gallery</title>
+
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #111;
+            color: #fff;
+        }
+
+        h1 {
+            text-align: center;
+            padding: 20px;
+        }
+
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 15px;
+            padding: 20px;
+            max-width: 1200px;
+            margin: auto;
+        }
+
+        .gallery img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .gallery img:hover {
+            transform: scale(1.05);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.6);
+        }
+    </style>
 </head>
 <body>
-    <header>
-        <h1>My Image Gallery</h1>
-    </header>
 
-    <main class="gallery">
-        <div class="gallery-item"><img src="images/img1.jpg" alt="Image 1" /></div>
-        <div class="gallery-item"><img src="images/img2.jpg" alt="Image 2" /></div>
-        <div class="gallery-item"><img src="images/img3.jpg" alt="Image 3" /></div>
-        <div class="gallery-item"><img src="images/img4.jpg" alt="Image 4" /></div>
-        <div class="gallery-item"><img src="images/img5.jpg" alt="Image 5" /></div>
-        <div class="gallery-item"><img src="images/img6.jpg" alt="Image 6" /></div>
-    </main>
+<h1>My Image Gallery</h1>
 
-    <footer>
-        <p>Made with ❤️ using GitHub Pages</p>
-    </footer>
+<div class="gallery">
+    <img src="about1.jpg" alt="About 1">
+    <img src="about2.jpg" alt="About 2">
+    <img src="slider1.jpg" alt="Slider 1">
+    <img src="slider2.jpg" alt="Slider 2">
+    <img src="slider3.jpg" alt="Slider 3">
+    <img src="g1.jpg" alt="Gallery Image">
+    <img src="h1.jpg" alt="Image H1">
+    <img src="w1.jpeg" alt="Image W1">
+</div>
+
 </body>
 </html>
